@@ -32,6 +32,7 @@ export default class MessageLWC extends LightningElement {
   
     //As soon as my component loads I want to subscribe to this message channel
     connectedCallback() {
+      //checking if the subscription is null
         if (!this.subscription) {
           this.subscription = subscribe(
             this.msgContext,
@@ -41,6 +42,8 @@ export default class MessageLWC extends LightningElement {
             },
             { scope: APPLICATION_SCOPE }
           );
+
+          console.log('subscription value', this.subscription);
         }
       }
 
@@ -87,11 +90,11 @@ export default class MessageLWC extends LightningElement {
 
         //something with message
         if (msgPayload && msgPayload.from !== "LWC") {
-            console.log('value of the payload received via Aura is ', msgPayload)
+            console.log('value of the payload received via Aura is ', msgPayload.message)
             this.messages.push({
               id: this.messages.length,
               value: msgPayload.message,
-              from: msgPayload.from
+              from: "AURA"
             });
           }
     }

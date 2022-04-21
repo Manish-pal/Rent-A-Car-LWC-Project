@@ -28,7 +28,8 @@
             //constrcuting  message payload 
             const messagePayload = {
 
-                messages : msg
+                message : msg,
+                from:"AURA"
             };
 
             //we need to publish this msg on message channel
@@ -52,7 +53,7 @@
             messages.push({
                 id: messages.length,
                 value: msg,
-                from: messages.from
+                from: "LWC"
             });
 
             component.set("v.messages", messages);
