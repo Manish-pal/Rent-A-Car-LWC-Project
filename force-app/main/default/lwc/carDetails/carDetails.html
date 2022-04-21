@@ -1,0 +1,30 @@
+<!--
+  @description       : 
+  @author            : Manish_pal@Epam.com
+  @group             : 
+  @last modified on  : 04-16-2022
+  @last modified by  : Manish_pal@Epam.com
+-->
+<template>
+    <template if:true={carFound}>
+        <lightning-card title="Car Detail Section">
+            {label.custlabel}
+    <lightning-layout multiple-rows>
+        <lightning-layout-item size="12">
+            <lightning-tabset active-tab-value={selectedTabValue}>
+                <lightning-tab label="Car Details" value="cardetailstab" onactive={tabChangeHandler}>
+                    <c-car-detail car={wiredCar}></c-car-detail>
+                </lightning-tab>
+                <lightning-tab label="Add Car Experience" value="addexperience" onactive={tabChangeHandler}>
+                    <!--Child Componennt addCarExperience with a public property carId -->
+                    <c-add-car-experience car-id={wiredCar.Id} onexperienceadded={experienceAddedHandler}></c-add-car-experience>
+                </lightning-tab>
+                <lightning-tab label="View Experiences" value="viewexperience" onactive={tabChangeHandler}>
+                    <c-car-experiences car-id={carId}></c-car-experiences>
+                </lightning-tab>
+            </lightning-tabset>
+        </lightning-layout-item>
+    </lightning-layout>
+    </lightning-card>
+    </template>
+</template>

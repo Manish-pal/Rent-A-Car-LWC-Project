@@ -1,0 +1,68 @@
+<!--
+  @description       : 
+  @author            : Manish_pal@Epam.com
+  @group             : 
+  @last modified on  : 04-05-2022
+  @last modified by  : Manish_pal@Epam.com
+-->
+<template>
+    <lightning-card title={carName} icon-name="utility:setup_assistant_guide">
+        <div slot="actions">
+            <lightning-button label="Full Details" onclick={fullDetails}></lightning-button>
+        </div>
+
+        <lightning-layout multiple-rows>
+            <lightning-layout-item size="12" small-device-size="6" medium-device-size="6">
+                <div class="slds-p-horizontal_small">
+
+                    <div class="carproperty">
+                        <span class="label">Car Model Name:</span>
+                        <lightning-formatted-text value={carName}></lightning-formatted-text>
+                    </div>
+
+                    <div class="carproperty">
+                        <span class="label">Build Year:</span>
+                        <lightning-formatted-number value={carBuildYear}></lightning-formatted-number>
+                    </div>
+
+                    <div class="carproperty">
+                        <span class="label">Mileage:</span>
+                        <lightning-formatted-number value={carMileage}></lightning-formatted-number>
+                    </div>
+
+                    <div class="carproperty">
+                        <span class="label">Owner Name:</span>
+                        <lightning-formatted-text value={carContactName}></lightning-formatted-text>
+                    </div>
+
+                    <div class="carproperty">
+                        <span class="label">Phone No:</span>
+                        <lightning-formatted-text value={carContactPhone}></lightning-formatted-text>
+                    </div>
+                    <div class="carproperty">
+                        <span class="label">Per Day Rent:</span>
+                        <lightning-formatted-number value={carPerDayRent}></lightning-formatted-number>
+                    </div>
+
+                    <div class="carproperty">
+                        <span class="label">Contact Email</span>
+                        <lightning-formatted-text value={carContactEmail}></lightning-formatted-text>
+                    </div>
+
+                    <div class="carproperty">
+                        <span class="label">Car Type</span>
+                        <lightning-formatted-text value={carTypeName}></lightning-formatted-text>
+                    </div>
+                </div>
+            </lightning-layout-item>
+
+            <lightning-layout-item size="12" small-device-size="6" medium-device-size="6">
+
+                <img src={carPictureUrl} class="car slds-align_absolute-center" alt="Car Picture">
+
+            </lightning-layout-item>
+
+
+        </lightning-layout>
+    </lightning-card>
+</template>

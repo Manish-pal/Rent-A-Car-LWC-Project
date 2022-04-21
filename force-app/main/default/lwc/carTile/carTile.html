@@ -1,0 +1,21 @@
+<!--
+  @description       : 
+  @author            : Manish_pal@Epam.com
+  @group             : 
+  @last modified on  : 04-05-2022
+  @last modified by  : Manish_pal@Epam.com
+-->
+<template>
+    <a onclick={handleCarSelect}>
+
+        <div class={isCarSelected}>
+            <img src={car.Picture__c} class="car slds-align_absolute-center"
+                 alt="car Picture">
+                 <div class="title slds-align_absolute-center">
+                    {car.Contact__r.Name}
+                   
+                 </div>
+
+        </div>
+    </a>
+</template>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningMessageChannel xmlns="http://soap.sforce.com/2006/04/metadata">
+    <masterLabel>Message Demo Channel</masterLabel>
+    <isExposed>true</isExposed>
+    <description>Message channel between Aura and LWC.</description>
+    <lightningMessageFields>
+        <fieldName>message</fieldName>
+        <description>Message Text</description>
+    </lightningMessageFields>
+    <lightningMessageFields>
+        
+        <fieldName>from</fieldName>
+        <description>From Component Name</description>
+    </lightningMessageFields>
+</LightningMessageChannel>
