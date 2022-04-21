@@ -28,7 +28,8 @@
             //constrcuting  message payload 
             const messagePayload = {
 
-                messages : msg
+                message : msg,
+                from:"AURA"
             };
 
             //we need to publish this msg on message channel
