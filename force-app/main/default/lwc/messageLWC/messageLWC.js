@@ -94,7 +94,7 @@ export default class MessageLWC extends LightningElement {
             this.messages.push({
               id: this.messages.length,
               value: msgPayload.message,
-              from: "AURA"
+              from: msgPayload.from
             });
           }
     }
