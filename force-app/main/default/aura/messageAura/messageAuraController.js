@@ -52,7 +52,7 @@
             messages.push({
                 id: messages.length,
                 value: msg,
-                from: messages.from
+                from: "LWC"
             });
 
             component.set("v.messages", messages);
