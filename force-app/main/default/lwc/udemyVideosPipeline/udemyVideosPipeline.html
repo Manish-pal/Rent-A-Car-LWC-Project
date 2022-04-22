@@ -1,0 +1,18 @@
+<!--
+  @description       : 
+  @author            : Manish_pal@Epam.com
+  @group             : 
+  @last modified on  : 04-22-2022
+  @last modified by  : Manish_pal@Epam.com
+-->
+<template>
+    <div style="background-color: white;">
+    <template for:each={todoVideos} for:item="video">
+        <div key={video.id} class="sfdcfacts-card">
+
+            <span class="sfdcfacts-card-title">{video.title}</span>
+            <p class="sfdcfacts-card-desc">{video.description}</p>
+        </div>
+    </template>
+</div>
+</template>

@@ -2,7 +2,7 @@
  * @description       : 
  * @author            : Manish_pal@Epam.com
  * @group             : 
- * @last modified on  : 04-21-2022
+ * @last modified on  : 04-22-2022
  * @last modified by  : Manish_pal@Epam.com
 **/
 import { LightningElement, track, wire } from 'lwc';
@@ -21,6 +21,10 @@ MessageContext -> it's a wired adaptor that creates a message context to send or
 publish -> used to send a message
 subscribe - > unsubscribe from a message
 */
+
+import hasSendPermission from '@salesforce/customPermission/Send_Message';
+// we can also check for user permission from "userPermission" module
+
 export default class MessageLWC extends LightningElement {
 
    @track messages = [];
@@ -97,5 +101,11 @@ export default class MessageLWC extends LightningElement {
               from: msgPayload.from
             });
           }
+    }
+
+    get disableSendButton() {
+
+      return !hasSendPermission;
+      // if the user does not have the permission then it would return true and the button will be disabled
     }
 }
