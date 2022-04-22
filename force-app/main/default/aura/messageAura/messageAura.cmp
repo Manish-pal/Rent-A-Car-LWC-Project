@@ -2,7 +2,7 @@
   @description       : 
   @author            : Manish_pal@Epam.com
   @group             : 
-  @last modified on  : 04-20-2022
+  @last modified on  : 04-22-2022
   @last modified by  : Manish_pal@Epam.com
 -->
 <aura:component implements="flexipage:availableForAllPageTypes">
@@ -30,7 +30,7 @@
                </lightning:layoutItem>
 
                <lightning:layoutItem size="3" class="slds-m-right_medium">
-                   <lightning:button label="send" variant="brand" onclick="{!c.sendHandler}" ></lightning:button>
+                   <lightning:button label="send" variant="brand" icon:name="utility:send" onclick="{!c.sendHandler}" ></lightning:button>
                </lightning:layoutItem>
            </lightning:layout>
         </div>

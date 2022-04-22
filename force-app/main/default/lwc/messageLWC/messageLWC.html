@@ -2,7 +2,7 @@
   @description       : 
   @author            : Manish_pal@Epam.com
   @group             : 
-  @last modified on  : 04-20-2022
+  @last modified on  : 04-22-2022
   @last modified by  : Manish_pal@Epam.com
 -->
 <template>
@@ -10,21 +10,21 @@
         <div class="slds-p-around_medium">
             <!--Iterate over the list-->
             <template for:each={messages} for:item="message">
-                <div key={message.id} class="message">
+                <div key={message.id} class="sfdcfacts-card">
                     {message.from} > {message.value}
                 </div>
             </template>
         </div>
         <div class="slds-p-around_medium">
            <lightning-layout>
-               <lightning-layout-item size="9" class="slds-m-right_medium">
+               <lightning-layout-item size="9" class="slds-m-right_medium"> 
                 <lightning-input type="text" variant="label-hidden">
 
                 </lightning-input>
                </lightning-layout-item>
 
                <lightning-layout-item size="3" class="slds-m-right_medium">
-                   <lightning-button label="send" icon-name="utility:send" variant="brand" onclick={sendHandler} ></lightning-button>
+                   <lightning-button label="send" icon-name="utility:send" variant="brand" onclick={sendHandler} disabled={disableSendButton}></lightning-button>
                </lightning-layout-item>
            </lightning-layout>
         </div>
